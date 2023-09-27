@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: color .5s;
+}
+
+a:hover{
+    color: #000;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+}
+
+footer{
+    background-color: #023047;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    margin: 15px;
+}
+
+footer ul li a{
+    font-size: 170%;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #023047;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li{
+    margin: 30px;
+}
+
+nav ul li a{
+    transition: color .5s;
+}
+
+nav ul li a:hover{
+    border-bottom: 1px solid #f2761e;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box .eye{
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), 
+                             inset 0 0 15px #f2761e;
+                             inset: 0 0 25px;
+}
+
+#box .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.pre_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.title h1{
+    font-size: 5rem;
+}
+
+.title p{
+    font-size: 120%;
+    text-align: justify;
+}
+
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+
+#article_about{
+    background-color: #219ebc;
+}
+
+#article_projects{
+    background-color: #8ecae6;
+}
+
+.images{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.images #house{
+    grid-column: span 3;
+}
+
+.images img{
+    height: 200px;
+}
+
+.pro{
+    background-color: #023047;
+    border-radius: 15px;
+    padding: 10px;
+    transition: transform .2s;
+}
+
+.pro:hover{
+    transform: scale(2, 2);
+    box-shadow: 2px 2px 20px rgba(0,0,0,.5);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .images img{
+        height: 150px;
+    }
+
+    main{
+        margin-left: 5%;
+    }
+
+    .title h1{
+        font-size: 3rem;
+    }
+
+    .title p{
+        font-size: 95%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .images img{
+        height: 100px;
+    }
+
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main{
+        margin-left: 10%;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section #box{
+        display: none;
+    }
+
+    .pre_title{
+        height: 100vh;
+    }
+
+    .title p{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .images img{
+        height: 100px;
+    }
+
+    article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    main{
+        margin-left: 8%;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section #box{
+        display: none;
+    }
+
+    .pre_title{
+        height: 100vh;
+    }
+
+    .title p{
+        font-size: 90%;
+    }
+}
